@@ -11,7 +11,8 @@ export default [
 			'**/.vscode',
 			'**/scripts',
 			'**/test-results',
-			'**/playwright-report'
+			'**/playwright-report',
+			'.commitlintrc.ts'
 		],
 	},
 	eslint.configs.recommended,
