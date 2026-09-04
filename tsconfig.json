@@ -1,0 +1,35 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"lib": [
+			"dom",
+			"dom.iterable",
+			"esnext"
+		],
+		"types": [
+			"node"
+		],
+		"allowJs": true,
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"noFallthroughCasesInSwitch": true,
+		"module": "esnext",
+		"moduleResolution": "bundler",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"noEmit": true,
+		"jsx": "react-jsx",
+		"outDir": "./dist"
+	},
+	"include": [
+		"src/**/*",
+		"eslint.config.mjs",
+		".commitlintrc.ts",
+		"webpack.config.ts",
+		"**/*.ts",
+		"**/*tsx"
+	]
+}
