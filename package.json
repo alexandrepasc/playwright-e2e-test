@@ -22,7 +22,6 @@
     "@playwright/test": "^1.62.1",
     "@stylistic/eslint-plugin": "^5.10.0",
     "@types/node": "^26.4.1",
-    "conventional-changelog-atom": "^5.1.0",
     "eslint": "^10.9.1",
     "eslint-plugin-playwright": "^2.11.0",
     "eslint-plugin-tsdoc": "^0.5.2",
