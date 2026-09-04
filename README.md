@@ -40,10 +40,12 @@ npx playwright install
 ├── tests/                    # Test specs
 │   ├── example.spec.ts       # Playwright starter examples
 │   └── home.spec.ts          # Homepage test suite
+├── .husky/                   # Git hooks (commitlint, lint-staged)
+├── .commitlintrc.ts          # Commitlint convention config
 ├── playwright.config.ts      # Playwright configuration
 ├── tsconfig.json             # TypeScript configuration
 ├── eslint.config.mjs         # ESLint flat config
-└── playwright-dev-test-suite.md  # 66-case E2E test analysis/design doc (reference)
+└── playwright-dev-test-suite.md  # 66-case E2E test analysis/design doc (untracked reference)
 ```
 
 Each page in `pages/**` follows the convention of a page class (`*.ts`) that holds the URL and high-level actions, a sibling `*Elements.ts` file that centralises the locators, and an `index.ts` barrel export.
@@ -63,6 +65,25 @@ TypeScript files are linted via ESLint. Key style rules (tabs, single quotes, se
 npm run lint
 npm run typecheck
 ```
+
+Running `npm run lint` uses `eslint --cache` (via `lint-staged` on staged files), so a `.eslintcache` file is generated locally; it is listed in `.gitignore`.
+
+## Commit conventions
+
+Commits are validated automatically by git hooks set up with [husky](https://typicode.github.io/husky/), configured by `npm install` via the `prepare` script.
+
+- `.husky/pre-commit` runs `lint-staged`, which lints staged TypeScript/JavaScript files with `eslint --cache`.
+- `.husky/commit-msg` runs [commitlint](https://commitlint.js.org) against the conventional-commits spec.
+
+Commit messages must follow the conventional format `type: subject` using one of: `build`, `ci`, `chore`, `docs`, `feat`, `fix`, `perf`, `refactor`, `style`, `test`. The subject must be lowercase, end without a period, and the header must not exceed 72 characters.
+
+Example:
+
+```text
+feat: add homepage hero tests
+```
+
+See `AGENTS.md` for the full workflow agents should follow.
 
 ## License
 
