@@ -108,25 +108,65 @@ test.describe('Home Page Test Suite', () => {
 			.toBeVisible();
 
 		await expect(home.builtTestTitleLabel())
-			.toHaveText('Built for testing');
+			.toHaveText(home.txts.BuiltTestTitle);
 
 		await expect(home.builtTestSubTitleList()
 			.nth(0))
-			.toHaveText('Auto-wait and web-first assertions');
+			.toHaveText(home.txts.BuiltTestSubTitle1);
 
 		await expect(home.builtTestSubTitleList()
 			.nth(1))
-			.toHaveText('Test isolation');
+			.toHaveText(home.txts.BuiltTestSubTitle2);
 
 		await expect(home.builtTestSubTitleList()
 			.nth(2))
-			.toHaveText('Resilient locators');
+			.toHaveText(home.txts.BuiltTestSubTitle3);
 
 		await expect(home.builtTestSubTitleList()
 			.nth(3))
-			.toHaveText('Parallelism and sharding');
+			.toHaveText(home.txts.BuiltTestSubTitle4);
 
-		// TODO: missing the other 2 sections and subsections
+		// ai
+		await expect(home.builtAiSection())
+			.toBeVisible();
+
+		await expect(home.builtAiTitleLabel())
+			.toHaveText(home.txts.BuiltAiTitle);
+
+		await expect(home.builtAiSubTitleList()
+			.nth(0))
+			.toHaveText(home.txts.BuiltAiSubTitle1);
+
+		await expect(home.builtAiSubTitleList()
+			.nth(1))
+			.toHaveText(home.txts.BuiltAiSubTitle2);
+
+		await expect(home.builtAiSubTitleList()
+			.nth(2))
+			.toHaveText(home.txts.BuiltAiSubTitle3);
+
+		await expect(home.builtAiSubTitleList()
+			.nth(3))
+			.toHaveText(home.txts.BuiltAiSubTitle4);
+
+		// tooling
+		await expect(home.toolingSection())
+			.toBeVisible();
+
+		await expect(home.toolingTitleLabel())
+			.toHaveText(home.txts.ToolingTitle);
+
+		await expect(home.toolingSubTitleList()
+			.nth(0))
+			.toHaveText(home.txts.ToolingSubTitle1);
+
+		await expect(home.toolingSubTitleList()
+			.nth(1))
+			.toHaveText(home.txts.ToolingSubTitle2);
+
+		await expect(home.toolingSubTitleList()
+			.nth(2))
+			.toHaveText(home.txts.ToolingSubTitle3);
 	});
 
 	// test('', async ({ page }: { page: Page }), => {});

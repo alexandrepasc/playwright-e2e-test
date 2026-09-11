@@ -33,5 +33,10 @@ export default class Elements {
 
 	builtAiSection = () => this.page.locator('section[class*="featureSection_"]:nth-child(3)');
 	builtAiTitleLabel = () => this.page.locator('section[class*="featureSection_"]:nth-child(3) h2');
+	builtAiSubTitleList = () => this.page.locator('section[class*="featureSection_"]:nth-child(3) div.row div.col h4');
+
+	toolingSection = () => this.page.locator('section[class*="featureSection_"]:nth-child(4)');
+	toolingTitleLabel = () => this.page.locator('section[class*="featureSection_"]:nth-child(4) h2');
+	toolingSubTitleList = () => this.page.locator('section[class*="featureSection_"]:nth-child(4) div.row div.col h4');
 	// = () => this.page.locator('');
 }
