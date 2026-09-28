@@ -2,6 +2,8 @@ import Home from '../pages/home';
 import Intro from '../pages/docs/intro';
 import test, { expect, Page } from '@playwright/test';
 
+// TODO: change the assertion texts written in this file to the const created in the /pages/home/home.ts
+
 test.describe('Home Page Test Suite', () => {
 	let home: Home;
 
@@ -169,5 +171,69 @@ test.describe('Home Page Test Suite', () => {
 			.toHaveText(home.txts.ToolingSubTitle3);
 	});
 
-	// test('', async ({ page }: { page: Page }), => {});
+	test('TC-HOME-006: Company logos section is visible', async ({ page }: { page: Page }) => {
+		home = new Home(page);
+
+		await expect(home.logosSection())
+			.toBeVisible();
+
+		await expect(home.logosSection())
+			.toHaveText(home.txts.LogosTitle);
+
+		await expect(home.logosVsCodeLink())
+			.toBeVisible();
+
+		await expect(home.logosVsCodeImg())
+			.toHaveScreenshot();
+
+		await expect(home.logosBingLink())
+			.toBeVisible();
+
+		await expect(home.logosBingImg())
+			.toHaveScreenshot();
+
+		await expect(home.logosOutlookLink())
+			.toBeVisible();
+
+		await expect(home.logosOutlookImg())
+			.toHaveScreenshot();
+
+		await expect(home.logosDisneyLink())
+			.toBeVisible();
+
+		await expect(home.logosDisneyImg())
+			.toHaveScreenshot();
+
+		await expect(home.logosMaterialUiLink())
+			.toBeVisible();
+
+		await expect(home.logosMaterialUiImg())
+			.toHaveScreenshot();
+
+		await expect(home.logosIngLink())
+			.toBeVisible();
+
+		await expect(home.logosIngImg())
+			.toHaveScreenshot();
+
+		await expect(home.logosAdobeLink())
+			.toBeVisible();
+
+		await expect(home.logosAdobeImg())
+			.toHaveScreenshot();
+
+		await expect(home.logosReactNavigationLink())
+			.toBeVisible();
+
+		await expect(home.logosReactNavigationImg())
+			.toHaveScreenshot();
+
+		await expect(home.logosAccInsightsLink())
+			.toBeVisible();
+
+		await expect(home.logosAccInsightsImg())
+			.toHaveScreenshot();
+	});
+
+	// test('', async ({ page }: { page: Page }) => {});
 });

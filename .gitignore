@@ -10,6 +10,7 @@ node_modules/
 # Documentation
 *test-suite.md
 AGENTS.md
+mcpTmp/
 
 # lint
 .eslintcache

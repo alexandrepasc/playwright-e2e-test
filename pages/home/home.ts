@@ -6,13 +6,6 @@ export default class Home extends Elements {
 	readonly url: string = '/';
 	readonly gitUrl: string = 'https://github.com/microsoft/playwright';
 
-	// readonly txts: {[ key: string ]: string} = {
-	// 	BuiltAiTitle:     'Built for AI agents',
-	// 	BuiltAiSubTitle1: 'Accessibility snapshots',
-	// 	BuiltAiSubTitle2: 'MCP server',
-	// 	BuiltAiSubTitle3: 'CLI for coding agents',
-	// 	BuiltAiSubTitle4: 'Session monitoring'
-	// };
 	readonly txts = {
 		BuiltTestTitle:     'Built for testing',
 		BuiltTestSubTitle1: 'Auto-wait and web-first assertions',
@@ -27,7 +20,8 @@ export default class Home extends Elements {
 		ToolingTitle:       'Powerful tooling',
 		ToolingSubTitle1:   'Test generator',
 		ToolingSubTitle2:   'Trace Viewer',
-		ToolingSubTitle3:   'VS Code extension'
+		ToolingSubTitle3:   'VS Code extension',
+		LogosTitle:         'Chosen by companies and open source projects'
 	} as const;
 
 	constructor(page: Page) {

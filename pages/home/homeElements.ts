@@ -38,5 +38,35 @@ export default class Elements {
 	toolingSection = () => this.page.locator('section[class*="featureSection_"]:nth-child(4)');
 	toolingTitleLabel = () => this.page.locator('section[class*="featureSection_"]:nth-child(4) h2');
 	toolingSubTitleList = () => this.page.locator('section[class*="featureSection_"]:nth-child(4) div.row div.col h4');
-	// = () => this.page.locator('');
+
+	logosSection = () => this.page.getByRole('heading', { name: /Chosen by companies/ })
+		.locator('xpath=..');
+	logosTitleLabel = () => this.page.getByRole('heading', { name: /Chosen by companies/ });
+	logosVsCodeLink = () => this.page.getByRole('link', { name: 'VS Code', exact: true });
+	logosVsCodeImg = () => this.page.getByRole('link', { name: 'VS Code', exact: true })
+		.locator('..');
+	logosBingLink = () => this.page.getByRole('link', { name: 'Bing', exact: true });
+	logosBingImg = () => this.page.getByRole('link', { name: 'Bing', exact: true })
+		.locator('..');
+	logosOutlookLink = () => this.page.getByRole('link', { name: 'Outlook', exact: true });
+	logosOutlookImg = () => this.page.getByRole('link', { name: 'Outlook', exact: true })
+		.locator('..');
+	logosDisneyLink = () => this.page.getByRole('link', { name: 'Disney+ Hotstar', exact: true });
+	logosDisneyImg = () => this.page.getByRole('link', { name: 'Disney+ Hotstar', exact: true })
+		.locator('..');
+	logosMaterialUiLink = () => this.page.getByRole('link', { name: 'Material UI', exact: true });
+	logosMaterialUiImg = () => this.page.getByRole('link', { name: 'Material UI', exact: true })
+		.locator('..');
+	logosIngLink = () => this.page.getByRole('link', { name: 'ING', exact: true });
+	logosIngImg = () => this.page.getByRole('link', { name: 'ING', exact: true })
+		.locator('..');
+	logosAdobeLink = () => this.page.getByRole('link', { name: 'Adobe', exact: true });
+	logosAdobeImg = () => this.page.getByRole('link', { name: 'Adobe', exact: true })
+		.locator('..');
+	logosReactNavigationLink = () => this.page.getByRole('link', { name: 'React Navigation', exact: true });
+	logosReactNavigationImg = () => this.page.getByRole('link', { name: 'React Navigation', exact: true })
+		.locator('..');
+	logosAccInsightsLink = () => this.page.getByRole('link', { name: 'Accessibility Insights', exact: true });
+	logosAccInsightsImg = () => this.page.getByRole('link', { name: 'Accessibility Insights', exact: true })
+		.locator('..');
 }
